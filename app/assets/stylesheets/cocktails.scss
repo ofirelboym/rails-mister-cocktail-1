@@ -1,0 +1,19 @@
+
+// Place all the styles related to the cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.center_link {
+  display: flex;
+  justify-content: space-around;
+  margin: 16px auto;
+}
+
+.doses-list {
+  padding: 16px;
+  box-shadow: 0px 10px 20px rgba(50, 50, 50, 0.3);
+}
+
+i {
+  color: #222831;
+  font-size: 32px;
+}
