@@ -1,0 +1,22 @@
+<div class="home-banner mb-4">
+  <h1>Cocktailtopia</h1>
+  <p>
+    <span id="banner-typed-text">Drink like a king!</span>
+  </p>
+</div>
+
+<div class="container d-flex">
+  <div class="row justify-content-center">
+    <% @cocktails.each do |cocktail| %>
+    <div class="card col-2 m-2 rounded" style="box-shadow: 0px 10px 30px rgba(50,50,50,0.3)">
+      <div class="card-body col-sm p-3 d-flex flex-column" height: 200px>
+        <%= cl_image_tag cocktail.photo,height: 200, crop: :fill, class: "card-img-top rounded" %>
+        <h5 class="card-title"><%= cocktail.name %></h5>
+        <p class="card-text">A great cocktail delicacy</p>
+        <%= link_to "Go to Cocktail", cocktail_path(cocktail), class: "btn btn-primary btn-block mt-auto" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+s

@@ -1,0 +1,32 @@
+<div class="home-banner" style="background-image: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.2)), url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+  <h1 class="m-4"><%= @cocktail.name.capitalize %>🍸</h1>
+</div>
+<div class="container" style="height: 80%">
+
+<div class="container">
+
+  <div class="d-flex justify-content-center">
+    <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary m-4 rounded "%>
+  </div>
+
+  <div class="row">
+    <% @cocktail.doses.each do |dose| %>
+    <div class="col-6">
+      <div class="card-product border m-4 doses-list" style="height: 150px">
+        <div class="card-product-infos">
+          <h2><%= dose.ingredient.name %></h2>
+          <div class="d-flex justify-content-between">
+            <p><%= dose.description %></p>
+            <p><%= link_to cocktail_dose_path(@cocktail, dose), method: :delete, class: "btn btn-transparent" do%>
+              <i class="fas fa-trash-alt"></i>
+              <% end %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</div>
+</div>
