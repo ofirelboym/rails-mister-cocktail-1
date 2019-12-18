@@ -1,0 +1,16 @@
+<div class="container" style="height: 85vh">
+
+<div class="row justify-content-center">
+  <div class="col-8">
+    <h2>New Ingredient</h2>
+
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.association :ingredient%>
+
+    <%= f.input :description %>
+    <%= f.submit "Add Recipe", class: "btn btn-primary"%>
+    <% end  %>
+  </div>
+</div>
+
+</div>
